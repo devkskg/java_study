@@ -9,7 +9,7 @@ public class Practice01 {
 			System.out.println(a + b);
 			System.out.println(b * (a + b));
 			System.out.println((b * (a + b)) / b);		
-			
+			 
 	}
 
 }
