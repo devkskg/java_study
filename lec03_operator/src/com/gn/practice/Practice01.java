@@ -5,7 +5,20 @@ import java.util.Scanner;
 public class Practice01 {
 
 	public static void main(String[] args) {
-		
+//		1) 문제
+//	철수는 오늘 학교에서
+//	산술 연산자 +, -, *, /, %에 대해서 배웠습니다.
+//	두 개의 정수를 키보드로 입력 받고,
+//	다섯가지 산술 연산을 하여
+//	결과를 출력해주는 계산기를 만들어주세요.
+//	2) 출력
+//	첫번째 숫자: **20**
+//	두번째 숫자: **3**
+//	덧셈 : 23
+//	뺄셈 : 17
+//	곱셈 : 60
+//	몫 : 6
+//	나머지 : 2
 		System.out.println("계산기ver.01");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("첫 번째 입력 숫자 : ");
