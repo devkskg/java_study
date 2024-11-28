@@ -21,6 +21,8 @@ public class Practice03 {
 		int num2 = sc.nextInt();
 		
 		boolean compare = (num1 > num2);
+		// 강사님께서는 변수 이름을 isFirstGTSecond라고 쓰셨음.
+		// 같은 클래스 내에서 더 많은 비교(크다, 작다 등)를 위해 compare 보다 더 좋아 보임.
 		
 		System.out.println("첫번째 숫자가 두번째 숫자보다 큰가요? " + compare);
 		
