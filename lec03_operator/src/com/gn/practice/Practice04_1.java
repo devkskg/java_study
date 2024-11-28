@@ -5,12 +5,6 @@ import java.util.Scanner;
 public class Practice04_1 {
 
 	public static void main(String[] args) {
-//		이니셜 "Cheolsu" 맞으신가요?
-//		아니요 "Chulsu" 입니다.
-//		혹시 "30"대 이신가요?
-//		"23"살입니다.
-		
-		
 //		1) 문제
 //	철수가 여권을 만들려고 합니다.
 //	철수가 입력한 이니셜과

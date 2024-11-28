@@ -71,6 +71,30 @@ public class CompareOperator {
 //		true && !false -> true && true -> true
 		System.out.println(test1 && !test2);
 		
+		System.out.println("9. 삼항 연산자");
+		int x = 5;
+		int y = 10;
+		
+		boolean result = x > y;
+//		x 랑 y 중에서 더 큰 값을 출력
+//		조건식 ? true 일 때 결과 ; false 일 때 결과
+		int max = result ? x : y;
+		System.out.println(max);
+		System.out.println(x > y ? x : y);
+		
+		int z = 3;
+//		3개의 정수 중에서 가장 큰 수 찾기
+		
+//		이건 내가 쓴 코드(중첩 삼항 연산자라고 하기엔 애매..? 그냥 삼항 연산자 반복인가.)
+//		int big2 = x > y ? x : y;
+//		int big3 = big2 > z ? big2 : z;
+//		System.out.println(big3);
+		
+//		이건 강사님께서 쓰신 코드
+		int big4 = x > y ? (x > z ? x : z) : (y > z ? y : z);
+		System.out.println(big4);
+		
+		
 	}
 
 }
