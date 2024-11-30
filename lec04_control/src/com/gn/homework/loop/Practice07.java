@@ -13,11 +13,10 @@ public class Practice07 {
 			System.out.println("양수가 아닙니다.");
 			System.out.println("다시 입력하세요. 정수 : ");
 			num = sc.nextInt();
-		
-		
+		} else {
 			while(i <= num) {
-				if(num <= 0) {
-				} else {
+//				if(num <= 0) {
+//				} else {
 					if(i % 2 == 1) {
 						System.out.print("박");
 						i++;
@@ -26,7 +25,7 @@ public class Practice07 {
 						i++;
 					}
 					
-				}
+//				}
 				
 			}
 		}
