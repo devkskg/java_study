@@ -27,7 +27,7 @@ public class Run {
 		case 7 : g.ptc07(); break;
 		}
 		sc.close();
-
+ 
 	}
 
 }
