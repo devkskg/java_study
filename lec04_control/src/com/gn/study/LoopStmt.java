@@ -84,7 +84,27 @@ public class LoopStmt {
 				}
 			}
 			
+//			8. do~while문
+			int count1 = 10;
+			while(count1 > 0 && count1 <10) {
+				System.out.println("while문 출력");
+				count1--;
+			}
 			
+			int count2 = 10;
+			do {
+				System.out.println(count2 + "do~while문 출력");
+				count2--;
+				
+			} while(count2 > 0 && count2 < 10);
+			
+//			9. continue
+			for(int i = 1; i <= 10; i++) {
+				if(i % 2 == 0) {
+					continue;
+				}
+				System.out.println(i);
+			}
 			
 		
 		
