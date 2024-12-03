@@ -15,6 +15,7 @@ public class Run {
 //		static 예약어
 		Car c2 = new Car();
 		Car c3 = new Car();
+		System.out.println(c2.brand);
 		c2.brand = "현대";
 		System.out.println(c2.name);
 		System.out.println(c1.brand); // 저장 공간이 static 안에 brand는 현대라고 저장이 되어있다.
