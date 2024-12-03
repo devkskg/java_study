@@ -20,7 +20,8 @@ public class Practice06 {
 			}
 		}
 		
-		String[] arr1 = new String[(i +1) * (j +1) -1];
+//		System.out.println(i + " " + j);
+		String[] arr1 = new String[i * j];
 		for(i = 0; i < arr0.length; i++) {
 			for(j = 0; j < arr0[i].length; j++) {
 				arr1[n] = arr0[i][j];
@@ -34,23 +35,35 @@ public class Practice06 {
 //		System.out.println(Arrays.asList(arr1).indexOf(str));
 //		System.out.println(arr1[Arrays.asList(arr0).indexOf(str)]);
 		System.out.print("검색하신 " + str + " 학생은 ");
-		if(Arrays.asList(arr1).indexOf(str) <= 5) {
-			System.out.print("1분단 ");
-		} else {
-			System.out.print("2분단 ");
-		}
-		if(Arrays.asList(arr1).indexOf(str) % 6 <= 1) {
-			System.out.print("첫 번째 줄 ");
-		} else if(1 < Arrays.asList(arr1).indexOf(str) % 6 && Arrays.asList(arr1).indexOf(str) % 6 <= 3) {
-			System.out.print("두 번째 줄 ");
-		} else {
-			System.out.print("세 번째 줄 ");
-		}
-		if(Arrays.asList(arr1).indexOf(str) % 2 == 0) {
-			System.out.print("왼쪽에 있습니다.");
-		} else {
-			System.out.print("오른쪽에 있습니다.");
-		}
+		
+//		while(true) {
+//			int k = 0;
+//						
+//			for(i = 0; i < arr1.length; i++) {
+//				if(arr1[i].equals(str)) {
+////					k = i;  indexOf 대체 가능
+//				}
+//			}
+			if(Arrays.asList(arr1).indexOf(str) <= 5) {
+				System.out.print("1분단 ");
+			} else {
+				System.out.print("2분단 ");
+			}
+			if(Arrays.asList(arr1).indexOf(str) % 6 <= 1) {
+				System.out.print("첫 번째 줄 ");
+			} else if(1 < Arrays.asList(arr1).indexOf(str) % 6 && Arrays.asList(arr1).indexOf(str) % 6 <= 3) {
+				System.out.print("두 번째 줄 ");
+			} else {
+				System.out.print("세 번째 줄 ");
+			}
+			if(Arrays.asList(arr1).indexOf(str) % 2 == 0) {
+				System.out.print("왼쪽에 있습니다.");
+			} else {
+				System.out.print("오른쪽에 있습니다.");
+			}
+			
+		sc.close();
+		
 	}
 
 }
