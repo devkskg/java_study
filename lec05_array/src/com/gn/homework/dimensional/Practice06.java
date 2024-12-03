@@ -17,6 +17,16 @@ public class Practice06 {
 		
 		while(true) {
 			
+			String[] arr2 = new String[num + n];
+			for(int i = 0; i < arr.length; i++) {
+				arr2[i] = arr[i];
+			}
+			
+			arr = new String[num + n];
+			for(int i = 0; i< arr.length; i++) {
+				arr[i] = arr2[i];
+			}
+			
 			while(n < arr.length) {
 				System.out.print((n + 1) + "번째 문자열 : ");
 				String str = sc.nextLine();
