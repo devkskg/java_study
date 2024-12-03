@@ -207,8 +207,27 @@ public class DimensionalArray {
 		}
 		System.out.println();
 		
+//		Math.random() -> 1~100 사이의 정수 랜덤값 도출
+		double basic = Math.random();
+		System.out.println(basic);
 		
+//		1. (최대값-최소값+1) 만큼 곱하기
+		double hundred = basic*100;
+		System.out.println(hundred);
 		
+//		2. 형변환
+		int casting = (int)hundred;
+		System.out.println(casting);
+		
+//		3. 최소값 더하기
+		int add = casting + 1;
+		System.out.println(add);
+		
+//		10~20 사이의 정수 랜덤값
+		int rnd = (int)(Math.random()*11)+10;
+		System.out.println(rnd);
+//		이거 좀 생각해보자. 곱하는 것은 자리수만 의미하는 줄 알았는데..
+//		숫자 범위를 맞춰주기 위해 (최대-최소+1) 곱하는 거네
 		
 		
 	}
