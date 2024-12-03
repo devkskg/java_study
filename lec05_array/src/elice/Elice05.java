@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Elice05 {
 
 	public static void main(String[] args) {
+//		각 동전 break 할때 조건이 좀 부족하다.
 		int[] coin = { 500, 100, 50, 10, 5, 1 };
 	    int[] cnt = { 5, 5, 5, 5, 5, 5 };
 	    Scanner sc = new Scanner(System.in);

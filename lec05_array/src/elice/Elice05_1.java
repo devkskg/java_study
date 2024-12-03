@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Elice05_1 {
 
 	public static void main(String[] args) {
+//		더 개선 가능할 거 같다. 반복 되는 문장이 많음.
+		
 		int[] coin = { 500, 100, 50, 10, 5, 1 };
 		int[] cnt = { 5, 5, 5, 5, 5, 5 };
 		int[] cnt2 = { 5, 5, 5, 5, 5, 5 };

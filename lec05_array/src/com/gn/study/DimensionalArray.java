@@ -181,7 +181,31 @@ public class DimensionalArray {
 			System.out.print(d + ", ");
 		}
 		
+		System.out.println("\n=== 배열의 복사 ===");
 		
+//		13. 배열의 복사
+//		(1) 얕은 복사
+		int[] arr1 = {5, 6, 7, 8};
+//		int[] arr2 = arr1;
+//		(2) 깊은 복사
+		int[] arr2 = new int[arr1.length];
+		System.out.println("\n===깊은 복사===");
+		for(int i = 0; i < arr2.length; i++) {
+			arr2[i] = arr1[i];
+		}
+		arr2[3] = 1000;
+//		arr2의 인덱스 3번을 바꿨다. 이때 얕은 복사에서는 같은 Heap영역의 데이터를 참조하기 때문에 arr1, arr2 같이 변한다.
+		for(int num1 : arr1) {
+			if(num1 == arr1[arr1.length - 1]) {
+				System.out.println(num1);
+			} else {
+				System.out.print(num1 + ", ");
+			}
+		}
+		for(int num2 : arr2) {
+			System.out.print(num2 + ", ");
+		}
+		System.out.println();
 		
 		
 		

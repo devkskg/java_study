@@ -11,13 +11,14 @@ public class Elice03 {
 		
 		for(int i = (str1.length() - 1); i >= 0; i--) {
 			str2 += str1.charAt(i);
+			System.out.println(str2);
 		}
 		if(str1.equals(str2)) {
 			System.out.println("대칭수");
 		} else {
 			System.out.println("대칭수아님");
 		}
-
+		sc.close();
 	}
 
 }
