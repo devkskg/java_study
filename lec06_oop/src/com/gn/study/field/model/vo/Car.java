@@ -4,6 +4,9 @@ public class Car {
 //	인스턴스 변수(필드)
 //	명시적 초기화
 	public static final String name = "avante";
+//	클래스 다이어그램으로 표현하면
+//	+ NAME : String 밑줄, 대문자
+//	
 //	필드의 접근 제한자
 //	필드의 예약어
 //	브랜드
