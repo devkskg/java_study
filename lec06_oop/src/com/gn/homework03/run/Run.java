@@ -21,12 +21,7 @@ public class Run {
 		case 2 : int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		Brain b2 = new Brain(num1, num2);
-		if(num1 < num2) {
-			System.out.println("계산할 수 없습니다.");
-			System.out.println(0);
-		} else {
-			System.out.println(b2.method2());
-		}
+		System.out.println(b2.method2());
 		break;
 		
 		case 3 : String str3 = sc.next();

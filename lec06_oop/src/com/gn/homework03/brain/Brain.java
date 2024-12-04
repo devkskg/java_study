@@ -31,7 +31,12 @@ public class Brain {
 	
 	public int method2() {
 			totalInt = num1 * num2;
-			return totalInt;
+			if(num1 < num2) {
+				System.out.println("계산할 수 없습니다.");
+				return 0;
+			} else {
+				return totalInt;
+			}
 	}
 	
 	public String method3() {
