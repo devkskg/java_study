@@ -26,7 +26,7 @@ public class Practice03 {
 			numArr[i] = num - i;
 			System.out.print(numArr[i]);
 		}
-		
+		sc.close();
 		
 //		121	3 -1
 //		12321	5 -2

@@ -25,5 +25,13 @@ public class Smartphone {
 	public String sendMsg(String msg) {
 		return "메시지 \'"+msg+"\'가 전송되었습니다."; // String은 이렇게 리턴이 가능하구나
 	}
+	
+	public void checkWork() {
+		Hospital hospital = new Hospital();
+		hospital.emergencyCall();
+		hospital.doctorCall();
+		hospital.staffAnnouncement();
+//		hospital.personalRecord();
+	}
 
 }
