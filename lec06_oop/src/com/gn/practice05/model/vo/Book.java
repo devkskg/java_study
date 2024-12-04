@@ -9,7 +9,12 @@ public class Book {
 	
 	public Book() {
 		this("a", "n", "c", 1, 1.0);
+		
 	}
+//	public Book(String title) {
+//		this(title, "n", "c", 1, 1.0);
+//		this.title = title;
+//	}
 	
 	public Book(String title, int price, String author) {
 		this.title = title;

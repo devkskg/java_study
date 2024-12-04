@@ -8,6 +8,8 @@ public class Run {
 		
 		Book book1 = new Book();
 		book1.information();
+//		Book book1 = new Book("운수 좋은 날");
+//		book1.information();
 		
 		Book book2 = new Book("홍길동전", 5000, "허균");
 		book2.information();
