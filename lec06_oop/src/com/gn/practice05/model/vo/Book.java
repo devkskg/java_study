@@ -7,7 +7,9 @@ public class Book {
 	private int price;
 	private double discountRate;
 	
-	public Book() {}
+	public Book() {
+		this("a", "n", "c", 1, 1.0);
+	}
 	
 	public Book(String title, int price, String author) {
 		this.title = title;
