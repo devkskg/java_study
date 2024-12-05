@@ -13,15 +13,15 @@ public class Supplement {
 		this.price = price;
 	}
 	
-	public String getName() {
-		return name;
-	}
-	public int getNum() {
-		return num;
-	}
-	public int getPrice() {
-		return price;
-	}
+//	public String getName() {
+//		return name;
+//	}
+//	public int getNum() {
+//		return num;
+//	}
+//	public int getPrice() {
+//		return price;
+//	}
 	
 	public void list() {
 		System.out.println("이름: " + name + ", 복용량: " + num + "알, 가격: " + price + "원");
