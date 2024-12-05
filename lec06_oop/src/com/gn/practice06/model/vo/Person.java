@@ -55,8 +55,7 @@ public class Person {
 		return email;
 	}
 	
-	public Person() {}
-	
+//	public Person() {}
 //	public Person(String id, String pwd, String name, int age, char gender, String phone, String email) {
 //		this.id = id;
 //		this.pwd = pwd;
