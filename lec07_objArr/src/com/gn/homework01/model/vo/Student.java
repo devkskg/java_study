@@ -8,9 +8,7 @@ public class Student {
 	private int eng;
 	private int math;
 	
-	public Student() {
-		this(1,1,"빈칸",1,1,1);
-	}
+	public Student() {}
 	public Student(int grade, int classroom, String name, int kor, int eng, int math) {
 		this.grade = grade;
 		this.classroom = classroom;
@@ -20,13 +18,6 @@ public class Student {
 		this.math = math;
 		}
 	
-	public String information() {
-		return "=== " + grade + "학년 " + classroom + "반 " + name + " ===" + "\n" 
-				+ "국어 : " + kor + "\n" 
-				+ "영어 : " + eng + "\n" 
-				+ "수학 : " + math + "\n" 
-				+ "평균 : " + (kor + eng + math) / 3;
-	}
 	
 	public void setGrade(int grade) {
 		this.grade = grade;
@@ -73,6 +64,13 @@ public class Student {
 //				+ "영어점수 : " + eng + "\n" 
 //				+ "수학점수 : " + math;
 	
+	public String information() {
+		return "=== " + grade + "학년 " + classroom + "반 " + name + " ===" + "\n" 
+				+ "국어 : " + kor + "\n" 
+				+ "영어 : " + eng + "\n" 
+				+ "수학 : " + math + "\n" 
+				+ "평균 : " + (kor + eng + math) / 3;
+	}
 	
 	
 	

@@ -10,62 +10,51 @@ public class Run {
 		
 		
 		Student[] arr = new Student[10];
-		
-		int count = 0;
-		
+		int count = 1;
 		Scanner sc = new Scanner(System.in);
+		String yn = "y";
 		
-//		String yn = "y";
-//		
-//		arr[0].setGrade(1);
-//		System.out.println(arr[0].getGrade());
-//		
-//		while(yn.equals("y")||yn.equals("Y")) {
-//			arr[count].setGrade(sc.nextInt());
-//			
-//			yn = sc.next();
-//			count++;
-//		}
-		
-		
-//		for(int i = 0; i < arr.length; i++) {
-//			count++;
-//			System.out.print("학년 : ");
-//			arr[i].setGrade(sc.nextInt());
-//		}
-		
-		for(Student ar : arr) {
-			count++;
-			ar = new Student(); // 이거 안들어가면 오류나는데??
+		for(int i = 0; i < count; i++) {
+			arr[i] = new Student(); // 이거 안들어가면 오류나는데??
+//			처음에 배울때 인덱스로 선언하면서 자연스레 new 클래스명(매개변수);를 사용해서
+//			그때는 자연스레 넘어갔던 것 같아.
+//			노션에 맨 마지막 줄에 설명 있음!
 			System.out.print("학년 : ");
 			int grade = sc.nextInt();
-			ar.setGrade(grade);
+			arr[i].setGrade(grade);
 			System.out.print("반 : ");
-			ar.setClassroom(sc.nextInt());
+			arr[i].setClassroom(sc.nextInt());
 			System.out.print("이름 : ");
-			ar.setName(sc.next());
+			arr[i].setName(sc.next());
 			System.out.print("국어점수 : ");
-			ar.setKor(sc.nextInt());
+			arr[i].setKor(sc.nextInt());
 			System.out.print("영어점수 : ");
-			ar.setEng(sc.nextInt());
+			arr[i].setEng(sc.nextInt());
 			System.out.print("수학점수 : ");
-			ar.setMath(sc.nextInt());
-			System.out.print("계속 추가하시겠습니까? ");
-			String yn = sc.next();
-			if(yn.equals("y") || yn.equals("Y")) {
-				continue;
-			} else if(yn.equals("n") || yn.equals("N")) {
+			arr[i].setMath(sc.nextInt());
+			
+			while(true) {
+				System.out.print("계속 추가하시겠습니까? ");
+				yn = sc.next();
+				if(yn.equals("y") || yn.equals("Y")) {
+					count++;
+					break;
+				} else if(yn.equals("n") || yn.equals("N")) {
+					break;
+				} else {
+					System.out.println("잘못 입력 하셨습니다.");
+					
+				}
+			}
+			if(yn.equals("n") || yn.equals("N")) {
 				break;
-			} else {
-				System.out.println("잘못 입력 하셨습니다.");
 			}
 		}
-		
-		for(Student a : arr) {
-			a.information();
+		for(int i = 0; i < count; i++) {
+//			arr[i] = new Student(); 위에서 arr[i] = new Student 참조 했으니 이번엔 안해도 된다.
+			System.out.println(arr[i].information());
 		}
-		
-		
+	sc.close();	
 	}
-
+	
 }
