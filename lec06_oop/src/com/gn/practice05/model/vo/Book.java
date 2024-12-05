@@ -34,7 +34,7 @@ public class Book {
 		System.out.println("=== " + title + " ===" );
 		System.out.println("저자 : " + author);
 		System.out.println("출판사 : " + publishser);
-		System.out.println("가격 : " + price);
+		System.out.println("가격 : " + price + "원");
 		System.out.println("할인율 : " + discountRate);
 	}
 	
