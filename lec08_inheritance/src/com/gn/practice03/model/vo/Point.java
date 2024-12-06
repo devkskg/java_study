@@ -11,7 +11,7 @@ public class Point {
 	}
 	
 	public void draw() {
-		System.out.println("(x, y) : (" + x + ", " + y + ")");
+//		System.out.println("(x, y) : (" + x + ", " + y + ")");
 	}
 	
 	public int getX() {
