@@ -34,25 +34,29 @@ public class CakeMenu {
 	public void chocolateMenu() {
 		System.out.print("밀가루(g) : ");
 		int flour = sc.nextInt();
-		System.out.println("크림(g) : " );
+		System.out.print("크림(g) : " );
 		int cream = sc.nextInt();
-		System.out.println("체리(개) : ");
+		System.out.print("체리(개) : ");
 		int cherry = sc.nextInt();
-		System.out.println("초콜릿 칩(개) : ");
+		System.out.print("초콜릿 칩(개) : ");
 		int chip = sc.nextInt();
-		cc.bakeChocolateCake(flour, cream, cherry, chip);
+		System.out.println(cc.bakeChocolateCake(flour, cream, cherry, chip));
+		System.out.println("초콜릿 케이크가 완성되었습니다.");
+		
 	}
 	
 	public void greenTeaMenu() {
 		System.out.print("밀가루(g) : ");
 		int flour = sc.nextInt();
-		System.out.println("크림(g) : " );
+		System.out.print("크림(g) : " );
 		int cream = sc.nextInt();
-		System.out.println("녹차파우더(g) : ");
+		System.out.print("녹차파우더(g) : ");
 		int powder = sc.nextInt();
-		System.out.println("치즈큐브(개) : ");
+		System.out.print("치즈큐브(개) : ");
 		int cheese = sc.nextInt();
-		gtc.bakeGreenTeaCake(flour, cream, powder, cheese);
+		System.out.print(gtc.bakeGreenTeaCake(flour, cream, powder, cheese));
+		System.out.println("치즈 케이크가 완성되었습니다.");
+		
 		
 	}
 	
