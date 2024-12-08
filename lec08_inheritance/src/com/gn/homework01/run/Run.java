@@ -16,13 +16,19 @@ public class Run {
 //			sa = new Student();
 			System.out.println(sa.toString());;
 		}
-		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		
 		
 		System.out.println("=== 사원 입력받기 ===");
+		
 		int z = 0;
-		Employee[] eArr = new Employee[1];
+		Employee[] eArr = new Employee[0];
+		
 		while(true) {
+			
 			System.out.print("이름 : ");
 			String name = sc.next();
 			System.out.print("나이 : ");
@@ -36,37 +42,45 @@ public class Run {
 			System.out.print("부서 : ");
 			String dept = sc.next();
 			
-//			if(z <= eArr.length) {
-//				Employee[] zArr = new Employee[eArr.length+1];
-//				for(int i = 0; i < eArr.length; i++) {
-//					zArr[i] = eArr[i];
-//				}
-//				eArr = zArr;
-//			}
 			
-			eArr[z] = new Employee(name, age, height, weight, salary, dept);
+			
+			
+//			eArr[z] = new Employee(name, age, height, weight, salary, dept);
 			z++;
+			
+			Employee[] nArr = new Employee[z]; // 늘어날때마다 배열길이 +1
+			for(int i = 0; i < eArr.length; i++) {
+//				eArr[i] = new Employee();
+				nArr[i] = eArr[i];
+			}
+			nArr[z-1] = new Employee(name, age, height, weight, salary, dept);
+			eArr = nArr; // 기존 배열의 주소값을 새로운 배열의 주소값으로 변화
+			
 			
 			String yn = "";
 			while(true) {
 				System.out.print("계속 추가하시겠습니까?(y/n)");
 				yn = sc.next();
 				if(yn.equals("y") || yn.equals("Y")) {
+//					z++;
 					break;
 				} else if(yn.equals("n") || yn.equals("N")) {
+					for(int i = 0; i < z; i++) {
+//						eArr[i] = new Employee();
+						System.out.println(eArr[i].toString());
+					}
 					break;
 				} else {
 					System.out.println("잘못 입력하셨습니다.");
 				}
 			}
-			if(yn.equals("n") || yn.equals("N")) {
-			}
 			
+			
+			if(yn.equals("n") || yn.equals("N")) {
 			break;
+			}
 		}
-		for(int i = 0; i < eArr.length; i++) {
-			System.out.println(eArr[i].toString());
-		}
+		
 		sc.close();
 	}
 }
