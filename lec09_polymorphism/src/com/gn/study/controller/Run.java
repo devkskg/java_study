@@ -1,8 +1,16 @@
 package com.gn.study.controller;
 
+import com.gn.study.model.vo.Alarm;
+import com.gn.study.model.vo.Animal;
 import com.gn.study.model.vo.Beverage;
+import com.gn.study.model.vo.Cat;
 import com.gn.study.model.vo.Coffee;
+import com.gn.study.model.vo.Dog;
+import com.gn.study.model.vo.Earth;
+import com.gn.study.model.vo.FireAlarm;
+import com.gn.study.model.vo.Mars;
 import com.gn.study.model.vo.OrangeJuice;
+import com.gn.study.model.vo.Planet;
 
 public class Run {
 	public static void main(String[] args) {
@@ -78,9 +86,48 @@ public class Run {
 		}
 //		만약 진짜 데이터가 OrangeJuice면 fresh()메소드 호출
 		
+		System.out.println("=====");
 		
 		
 		
+//		4. 정적 바인딩 - 오버로딩
+		Planet myPlanet = new Planet();
+		myPlanet.description();
+		myPlanet.description(46);
+		
+		System.out.println("=====");
+		
+		
+		
+//		5. 동적 바인딩 - 오버라이딩
+		Planet p1 = new Earth();
+		Planet p2 = new Mars();
+		
+		p1.material();
+		p2.material();
+//		((Planet)p1).material(); 이거 왜 지구 나옴? 겉 껍질만 업캐스팅 가능한 느낌?
+		
+		
+		System.out.println("=====");
+		
+		
+		
+//		6. 추상 메소드
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		dog.sound();
+		cat.sound();
+//		Animal a = new Animal(); // 추상 클래스는 객체화의 구현체에 사용을 못한다.
+		cat.breath();
+		
+		System.out.println("=====");
+		
+		
+		
+//		7. 인터페이스
+		Alarm a = new FireAlarm();
+		System.out.println(Alarm.MAX_VOLUME);
+		a.soundAlarm();
 		
 		
 		
