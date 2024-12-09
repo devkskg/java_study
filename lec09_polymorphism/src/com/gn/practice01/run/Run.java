@@ -29,8 +29,8 @@ public class Run {
 		arr2[0] = s;
 		arr2[1] = e;
 		
-		for(Person pp : arr1) {
-			pp.introduce();
+		for(Person p : arr2) {
+			p.introduce();
 		}
 		
 		
