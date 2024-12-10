@@ -2,6 +2,7 @@ package com.gn.homework03.view;
 
 import java.util.Scanner;
 
+import com.gn.homework03.exception.CharCheckException;
 import com.gn.homework03controller.CharacterController;
 
 public class CharacterMenu {
@@ -14,7 +15,7 @@ public class CharacterMenu {
 		
 		try {
 			System.out.println(ccon.countAlpha(str));
-		} catch (Exception e) {
+		} catch (CharCheckException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}

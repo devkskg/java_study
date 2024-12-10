@@ -18,6 +18,7 @@ public class Homework01 {
 				if (1 <= num && num <= 50) {
 					if (rd == num) {
 						count++;
+						sc.close();
 						break;
 					} else if (rd < num) {
 						System.out.println("Down!");
@@ -53,8 +54,8 @@ public class Homework01 {
 //				} else if (num < 1 || 50 < num) {
 //					System.out.println("범위 안의 숫자 입력 필요 : ");
 //				}
+				
 			}
-
 		}
 
 		System.out.println("축하합니다~ 정답이에요");

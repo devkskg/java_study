@@ -3,6 +3,7 @@ package com.gn.homework04.view;
 import java.util.Scanner;
 
 import com.gn.homework04.controller.NumberController;
+import com.gn.homework04.exception.NumRangeException;
 
 public class NumberMenu {
 	Scanner sc = new Scanner(System.in);
@@ -22,7 +23,7 @@ public class NumberMenu {
 			}
 			
 			
-		} catch (Exception e) {
+		} catch (NumRangeException e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
