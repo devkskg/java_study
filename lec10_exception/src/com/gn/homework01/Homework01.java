@@ -7,14 +7,13 @@ public class Homework01 {
 		int rd = (int) (Math.random() * 50) + 1;
 		System.out.println(rd);
 		Scanner sc = new Scanner(System.in);
-		int num = 0;
+		int num = sc.nextInt();
 
 		System.out.print("1~50사이의 숫자 : ");
 
-		while (rd != num) {
+		while (true) {
 
 			try {
-				num = sc.nextInt();
 				if (1 <= num && num <= 50) {
 					if (rd == num) {
 						break;
@@ -23,16 +22,18 @@ public class Homework01 {
 					} else if (rd > num) {
 						System.out.println("Up!");
 					}
-				} else if (num < 1 || 50 < num) {
-					System.out.println("범위 안의 숫자 입력 필요 : ");
-				} else {
-//					throw new Exception("범위 안의 숫자 입력 필요 : ");
 				}
+//				else if (num < 1 || 50 < num) {
+//					System.out.println("범위 안의 숫자 입력 필요 : ");
+//				} else {
+////					throw new Exception("범위 안의 숫자 입력 필요 : ");
+//				}
 
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			} finally {
-
+				System.out.println("범위 안의 숫자 입력 필요 : ");
+				num = sc.nextInt();
 //				if (1 <= num && num <= 50) {
 //					if (rd == num) {
 //						break;
