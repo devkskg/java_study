@@ -61,7 +61,17 @@ public class BookController {
 
 	public int ascBook() {
 		Collections.sort(bookList);
-		return 1;
-
+		int result = 1;
+//		int result = -1;
+//		for (int i = 0; i < bookList.size() - 1; i++) {
+//			if (bookList.get(i).getTitle().compareTo(bookList.get(i + 1).getTitle()) == 1) {
+//				Collections.sort(bookList);
+//				result = 1;
+//				break;
+//			} else {
+//				result = -1;
+//			}
+//		}
+		return result;
 	}
 }

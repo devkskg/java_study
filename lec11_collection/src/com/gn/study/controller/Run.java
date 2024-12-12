@@ -2,7 +2,9 @@ package com.gn.study.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.gn.study.model.vo.Container;
 import com.gn.study.model.vo.Student;
@@ -118,17 +120,20 @@ public class Run {
 		System.out.println("내림차순 : " + nums);
 
 //		7. ArrayList<객체>
+		Student s = new Student();
 		List<Student> students = new ArrayList<Student>();
 		students.add(new Student("김철수", 50)); // 형태 좀 생소한 느낌이지만 하던거+하던거라서 외워보자
 
 		System.out.println(students);
 
+//		System.out.println("요거요거요거요거");
 		if (students.contains(new Student("김철수", 50))) {
 			System.out.println("O");
 		} else {
 			System.out.println("X");
 		}
 
+//		System.out.println("요거요거요거요거");
 		if (students.indexOf(new Student("김철수", 50)) != -1) {
 			System.out.println("O");
 		} else {
@@ -138,10 +143,66 @@ public class Run {
 		students.add(new Student("이영희", 40));
 		students.add(new Student("홍길동", 30));
 
+//		이거이거이거이거이거이거 compareTo 숫자로 받는거야야야야
+//		1 -1 0 이런식으로 받고싶으면 compareTo 메소드에서 변형시켜야대ㅐㅐㅐㅐ
+		int result000 = students.get(0).compareTo(students.get(1));
+		System.out.println(result000);
+//		이거이거이거이거이거이거 compareTo 숫자로 받는거야야야야
+//		1 -1 0 이런식으로 받고싶으면 compareTo 메소드에서 변형시켜야대ㅐㅐㅐㅐ
+
 		System.out.println("정렬 전 : " + students);
 
 		Collections.sort(students);
 		System.out.println("정렬 후 : " + students);
+
+		System.out.println("============HashSet============");
+		Set<String> city = new HashSet<String>();
+		city.add("서울");
+		if (city.add("부산")) {
+			System.out.println("부산 넣었음");
+		}
+		city.add("광명");
+		System.out.println(city);
+//		중복 데이터 추가 시도
+		city.add("서울");
+		if (city.add("서울")) {
+			System.out.println("서울 넣었음");
+			System.out.println(city);
+		} else {
+			System.out.println("서울 못 넣었음");
+			System.out.println(city);
+		}
+
+//		전체 출력
+		System.out.println("===전체 출력===");
+		for (String str : city) {
+			System.out.println(str);
+//			city.remove(str);
+//			if (city.size() == 0) {
+//				System.out.println("마지막!!");
+//			}
+		}
+//		System.out.println("확인용" + city);
+
+//		삭제
+		city.remove("서울");
+		System.out.println("삭제후 : " + city);
+		city.clear();
+		System.out.println("비우기 : " + city);
+		if (city.isEmpty()) {
+			System.out.println("도시가 없습니다.");
+		}
+
+		Set<Student> set1 = new HashSet<Student>();
+		set1.add(new Student("김철수", 30));
+		set1.add(new Student("이영희", 40));
+		set1.add(new Student("홍길동", 50));
+		set1.add(new Student("김철수", 30));
+		System.out.println(set1);
+//		hashCode와 equals 모두 만족해야 같은 정보로 판단한다.
+//		저번시간에 Student에 equals 오버라이드 해놨으니 오케이~
+		set1.remove(new Student("김철수", 30));
+		System.out.println("삭제 후 : " + set1);
 
 	}
 }

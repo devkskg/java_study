@@ -7,6 +7,12 @@ public class Run {
 	public static void main(String[] args) {
 		List<Product> arr = new ArrayList<Product>();
 		arr.add(new Product("사과", 1000));
+//		
+		System.out.println(arr.add(new Product("사과", 1000)));
+		if (arr.add(new Product("사과", 1000))) {
+			System.out.println("사과가 잘 저장 되었습니다");
+		}
+//		
 		arr.add(new Product("바나나", 2000));
 		arr.add(new Product("딸기", 3000));
 
