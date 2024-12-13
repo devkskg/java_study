@@ -1,10 +1,12 @@
 package com.gn.study.controller;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 import com.gn.study.model.vo.Snack;
 
@@ -41,7 +43,7 @@ public class MapRun {
 //			System.out.println(key);
 //			System.out.println("value 확인");
 			Object value = flower.get(key);
-//			Object value = (String) flower.get(key); // 이거 왜 오류남??????????????
+//			Object value = (String) flower.get(key); // Integer -> String 강제형변환(오류)을 나타낼 수 없어서 오류가 난다!
 			System.out.println(key + ":" + value);
 		}
 		System.out.println("*****");
@@ -97,6 +99,43 @@ public class MapRun {
 //			Snack value = snackMap.get(key);
 			System.out.println(key + " %%%% " + value);
 		}
+
+//		8. HashMap 요소 삭제
+//		System.out.println(flower.size() + " : " + flower);
+//		flower.remove("price");
+//		System.out.println(flower.size() + " : " + flower);
+//		flower.clear();
+//		System.out.println(flower.size() + " : " + flower);
+
+//		9. HashMap 요소 검색
+		if (flower.containsKey("price")) {
+			System.out.println("O");
+		} else {
+			System.out.println("X");
+		}
+
+		if (flower.containsValue(40000)) {
+			System.out.println("싸다!");
+		} else {
+			System.out.println("비싸다~");
+		}
+
+		System.out.println(snackMap);
+//		10. HashMap<객체> 요소 검색
+		if (snackMap.containsValue(new Snack("매운맛", 1600))) {
+			System.out.println("다 내꺼");
+		}
+
+//		11. LinkedHashMap
+		Map<String, Object> flower2
+//		= new HashMap<String, Object>();
+//		= new LinkedHashMap<String, Object>();
+				= new TreeMap<String, Object>(Collections.reverseOrder());
+		flower2.put("price", 20000);
+		flower2.put("lang", "고백");
+		flower2.put("name", "튤립");
+
+		System.out.println(flower2);
 
 	}
 }
