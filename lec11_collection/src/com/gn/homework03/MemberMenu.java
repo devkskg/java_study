@@ -147,6 +147,9 @@ public class MemberMenu {
 		System.out.println("=== 3. 같은 이름 회원 찾기 ===");
 		System.out.print("검색할 이름 : ");
 		String name = sc.next();
+		if(mc.sameName(name).isEmpty()) {
+			System.out.println("일치하는 회원이 없습니다");
+		}
 		mc.sameName(name);
 		Set<Entry<String, String>> entSet = mc.sameName(name).entrySet();
 		Iterator<Entry<String, String>> i = entSet.iterator();
@@ -154,8 +157,8 @@ public class MemberMenu {
 			Entry<String, String> entry = i.next();
 			String key = entry.getKey();
 			String value = entry.getValue();
-			if (mc.sameName(name).isEmpty()) { // 이거 왜 안됨?
-				System.out.println("일치하는 회원이 없습니다");
+			if (mc.sameName(name).isEmpty() || mc.sameName(name).size() == 0) { // 이거 왜 안됨?
+//				System.out.println("일치하는 회원이 없습니다");
 			} else {
 				System.out.println(value + "-" + key);
 			}
