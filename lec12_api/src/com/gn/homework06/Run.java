@@ -8,19 +8,18 @@ public class Run {
 		String[] arr = sentence.split(" ");
 
 		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 입력 : ");
 		String str = sc.next();
 		int z = 0;
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i].equals(str) && i != arr.length - 1) {
 				System.out.println(str + " 다음 단어 : " + arr[i + 1]);
 				z++;
-				break;
 			} else if (i == arr.length - 1 && arr[i].equals(str)) {
 				System.out.println("마지막 단어입니다.");
 				z++;
 			} else if (z == 0 && i == arr.length - 1) {
 				System.out.println("존재하지 않는 단어입니다.");
-				break;
 			}
 		}
 		sc.close();
