@@ -56,10 +56,77 @@ public class StringRun {
 		System.out.println(test.lastIndexOf("."));
 		System.out.println(test.lastIndexOf("12"));
 
+		System.out.println("===");
+
 //		11. split
-		String[] time = test.split(".");
-		for (String t : time) {
+		String[] time1 = test.split("\\.");
+		for (String t : time1) {
 			System.out.println(t);
 		}
+
+		String name = "김-철-수 "; // 이럴때 보통 스플릿 쓴다.
+		String[] nameArr = name.split("-");
+		for (String n : nameArr) {
+			System.out.println(n);
+		}
+//		역할이 있는 특수기호( 온점, 더하기 )가 구분자로 사용될때 \\ 역슬래시 두번 해준다.
+		String a = "a+b+c+d";
+		String[] arrA = a.split("\\+");
+		String b = "e.f.g.h";
+		String[] arrB = b.split("\\.");
+
+//		12. 문자열 바꾸기
+		String ide = "eclipse";
+		ide = ide.replace("e", "a");
+		System.out.println(ide);
+		String id = "김 철 수";
+		id = id.replace(" ", "");
+		System.out.println(id);
+//		원하지 않는 띄어쓰기, 특수문자를 바꾸거나 없앨 수 있음
+
+//		13. 비어있는지 확인
+		String empty1 = "";
+		String empty2 = " ";
+		System.out.println("(1) : " + empty1.isBlank());
+		System.out.println("(2) : " + empty2.isBlank());
+
+		System.out.println("(3) : " + empty1.isEmpty());
+		System.out.println("(4) : " + empty2.isEmpty());
+
+		System.out.println("(5) : " + (empty1.length() == 0));
+		System.out.println("(6) : " + (empty2.length() == 0));
+		empty2 = empty2.replace(" ", ""); // 문자열 공백 제거
+		System.out.println(empty2.length() == 0);
+
+		String empty3 = " 안 녕 ";
+		System.out.println(empty3);
+		empty3 = empty3.trim();
+		System.out.println(empty3);
+//		empty3 = empty3.replace(" ", "");
+//		System.out.println(empty3);
+
+//		System.out.println("==="); // 맨 앞의 띄어쓰기만 가져가고 뒤에거는 왜 버려짐?
+//		String asdf = " 가 나 다 라 ";
+//		String[] asdfArr = asdf.split(" ");
+//		for (String as : asdfArr) {
+//			System.out.println(as);
+//		}
+//		System.out.println("===");
+
+		String[] students = { "철수", "영희", "길동" };
+		String allStudent = String.join("-", students);
+		System.out.println(allStudent);
+
+		String cutTest = "hello world";
+		System.out.println(cutTest.substring(6));
+		System.out.println(cutTest.substring(0, 7));
+		// cutTest.charAt(3)
+		System.out.println(cutTest.substring(3, 4));
+
+		String file = "test.jpg";
+		String ex = file.substring(file.lastIndexOf(".") + 1);
+		String file_name = file.substring(0, file.lastIndexOf("."));
+		System.out.println("파일명 : " + file_name);
+		System.out.println("확장자명 : " + ex);
 	}
 }
