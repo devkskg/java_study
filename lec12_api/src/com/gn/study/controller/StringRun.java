@@ -23,6 +23,13 @@ public class StringRun {
 //		값이 같아도 hashCode 다름, == 비교 연산자 사용 불가능
 		String str2 = new String("Hello");
 		System.out.println("Hello(3) : " + System.identityHashCode(str2));
+		String str3 = new String("Hello");
+		System.out.println("Hello(3) : " + System.identityHashCode(str3));
+
+		System.out.println(str.hashCode());
+		System.out.println(str1.hashCode());
+		System.out.println(str2.hashCode());
+		System.out.println(str3.hashCode());
 
 //		3. equals
 		System.out.println("equals() : " + ("Hi".equals(str2))); // equals 는 리터럴이든 객체로 쓰든 상관 없다
