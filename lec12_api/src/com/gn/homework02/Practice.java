@@ -4,8 +4,14 @@ public class Practice {
 
 	public String takeState(String str) {
 		String[] strArr = str.split(" ");
-		String cov = String.join("\n", strArr);
-		return cov;
+		String result = null;
+		for (String st : strArr) {
+			if (st.charAt(st.length() - 1) == '구') {
+				result = st;
+			}
+		}
+		return result;
+
 	}
 
 }

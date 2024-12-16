@@ -12,6 +12,8 @@ public class Run {
 		list.add("경상북도 구미시 송정대로 55");
 
 		Practice p = new Practice();
-		System.out.println(p.takeState(list.get(0)));
+		for (String l : list) {
+			System.out.println(p.takeState(l));
+		}
 	}
 }
