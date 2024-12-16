@@ -26,6 +26,7 @@ public class Run02 {
 			}
 
 		}
+		sc.close();
 
 	}
 }
