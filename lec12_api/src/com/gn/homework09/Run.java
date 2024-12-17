@@ -8,6 +8,8 @@ public class Run {
 	public static void main(String[] args) {
 		Calendar cal1 = Calendar.getInstance();
 		cal1.set(2025, 01 - 1, 24);
+//		cal1.set(2024, 12 - 1, 18, 17, 7, 00);
+//		cal1.set(2024, 12 - 1, 18);
 		Date openDate = cal1.getTime();
 
 		Calendar cal2 = Calendar.getInstance();
