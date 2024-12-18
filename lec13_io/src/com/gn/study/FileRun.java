@@ -118,6 +118,7 @@ public class FileRun {
 //		(3) 부모 확인
 		System.out.println(test.getParent());
 //		(4) 이름 확인
+		System.out.println("===");
 		System.out.println(test.getName());
 //		(5) 전체 경로 확인
 		System.out.println(test.getPath());
