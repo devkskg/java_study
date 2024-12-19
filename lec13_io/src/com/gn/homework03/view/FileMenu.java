@@ -9,6 +9,7 @@ public class FileMenu {
 	private Scanner sc = new Scanner(System.in);
 	private FileController fc = new FileController();
 	
+	
 	public void mainMenu() {
 		
 		while(true) {
@@ -38,27 +39,77 @@ public class FileMenu {
 	
 	public void fileSave() {
 		StringBuilder sb = new StringBuilder();
-		System.out.print("내용 : ");
+		sc.nextLine();
 		while(true) {
+			System.out.print("파일에 저장할 내용을 입력하세요\nex끝it  이라고 입력하면 종료됩니다.\n내용 : ");
 			String str = sc.nextLine();
 			if(!str.contains("ex끝it")) {
-				sb.append(str);
+				sb.append(str).append("\n");
 			} else {
+				if(sb.length() > 0) {
+					sb.deleteCharAt(sb.length()-1);
+				}
 				break;
 			}
 		}
-		sc.nextLine();
-		System.out.println(" 저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
-		String title = sc.next();
-		File file = new file();
+		while(true) {
+			System.out.print("저장할 파일 명을 입력해주세요(ex. myFile.txt) : ");
+			String title = sc.next();
+			if(fc.checkName(title)) {
+				System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n)");
+				String answer = sc.next().toUpperCase();
+				if(answer.equals("Y")) {
+					fc.fileSave(title, sb);
+					break;
+				} else if(answer.equals("N")) {
+				} else {
+					System.out.println("잘못 입력하셨습니다.");
+				}
+				
+			} else {
+				fc.fileSave(title, sb);
+				break;
+			}
+		}
+		
 		
 	}
 	
 	public void fileOpen() {
-		
+		System.out.print("열 파일 명 : ");
+		String str = sc.next();
+		if(fc.checkName(str) == false) {
+			System.out.println("없는 파일입니다.");
+		} else {
+			StringBuilder sb = fc.fileOpen(str);
+			sb.deleteCharAt(sb.length()-1);
+			System.out.println(sb.toString());
+		}
 	}
 	
 	public void fileEdit() {
-		
+		StringBuilder sb = new StringBuilder();
+		System.out.print("수정할 파일 명 : ");
+		sc.nextLine();
+		String str = sc.nextLine();
+		if(fc.checkName(str)) {
+			while(true) {
+				System.out.println("파일에 저장할 내용을 입력하세요");
+				System.out.println("ex끝it  이라고 입력하면 종료됩니다.");
+				System.out.print("내용 : ");
+				String str2 = sc.nextLine();
+				if(str2.contains("ex끝it")) {
+					if(sb.length() > 0) {
+						sb.deleteCharAt(sb.length()-1);
+					}
+					break;
+				} else {
+					sb.append(str2).append("\n");
+				}
+			}
+			fc.fileEdit(str, sb);
+		} else {
+			System.out.println("없는 파일입니다.");
+		}
 	}
 }
