@@ -40,6 +40,7 @@ public class Elice01 {
 				   num2 = Integer.parseInt(str2);
 				   System.out.println(num1+num2);
 			   }
+			   System.out.println(num1+num2);
 			   
 		   } catch(Exception e) {
 			   System.out.println(e.getMessage());

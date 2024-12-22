@@ -118,6 +118,7 @@ public class Run {
 		dog.sound();
 		cat.sound();
 //		Animal a = new Animal(); // 추상 클래스는 객체화의 구현체에 사용을 못한다.
+		dog.breath();
 		cat.breath();
 		
 		System.out.println("=====");

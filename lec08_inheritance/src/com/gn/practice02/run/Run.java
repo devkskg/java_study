@@ -8,8 +8,8 @@ public class Run {
 	public static void main(String[] args) {
 		
 		Appliance ap = new Appliance();
-		WashingMachine wa = new WashingMachine();
-		Refrigerator re = new Refrigerator();
+		Appliance wa = new WashingMachine();
+		Appliance re = new Refrigerator();
 		
 		ap.turnOn();
 		wa.turnOn();

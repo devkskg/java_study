@@ -25,6 +25,7 @@ public class Run {
 		Pizza p = new Pizza();
 		p.printReaction();
 		
+		System.out.println("====");
 		Flower f1 = new Flower("장미", "빨간색");
 		Flower f2 = new Flower("장미", "빨간색");
 		
