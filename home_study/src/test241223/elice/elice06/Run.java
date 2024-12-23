@@ -12,12 +12,12 @@ public class Run {
 		int x = (legs - 2 * animal) / 2;
 		int y = animal - x;
 		
-		for(int i = 1; i < animal; i++) {
-			if(i == ((legs - 2 * animal) / 2)) {
-				x = i;
-				break;
-			}
-		}
+//		for(int i = 1; i < animal; i++) {
+//			if(i == ((legs - 2 * animal) / 2)) {
+//				x = i;
+//				break;
+//			}
+//		}
 		
 		if(x >= 0 && y >= 0) {
 			System.out.println(x + " " + y);
