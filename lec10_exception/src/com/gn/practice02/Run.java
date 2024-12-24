@@ -2,7 +2,7 @@ package com.gn.practice02;
 
 public class Run {
 	public static void main(String[] args) {
-		Practice p = new Practice();
+		Practice02 p = new Practice02();
 		p.printStrLength(null);
 //		try {
 //			p.printStrLength(null);
