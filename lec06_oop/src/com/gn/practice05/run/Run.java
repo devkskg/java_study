@@ -17,7 +17,7 @@ public class Run {
 		Book book3 = new Book("채소 과일 레시피", "터치아트", "박경희", 19300, 0.1);
 		book3.information();
 		
-		
+		 
 
 	}
 

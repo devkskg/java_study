@@ -31,7 +31,7 @@ public class Run {
 		p1.setEmail("kcs@gmail.com");
 		
 		System.out.println(p1.information());
-		
+		 
 //		System.out.println("=====");
 //		
 //		Person p2 = new Person("user01", "1234", "김철수", 43, 'M', "010-111-1111", "kcs@gmail.com");

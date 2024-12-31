@@ -1,5 +1,5 @@
 package com.gn.practice06.model.vo;
-
+ 
 public class Person {
 	private String id;
 	private String pwd;

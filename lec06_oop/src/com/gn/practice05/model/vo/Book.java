@@ -29,7 +29,7 @@ public class Book {
 		this.price = price;
 		this.discountRate = discountRate;
 	}
-	
+	 
 	public void information() {
 		System.out.println("=== " + title + " ===" );
 		System.out.println("저자 : " + author);

@@ -31,7 +31,7 @@ public class Run {
 		
 		System.out.println("========== 영양제 목록 ==========");
 		for(Supplement sup : arr1) {
-			sup.list();
+			sup.list(); 
 		}
 		
 	}

@@ -19,7 +19,7 @@ public class Run {
 //		4. 여행 목적지 설정하기
 		String msg = myCar.setDestination("서울");
 		System.out.println(msg);
-		
+		 
 		myCar.onGoing();
 	}
 }

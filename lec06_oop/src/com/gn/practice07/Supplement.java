@@ -25,6 +25,6 @@ public class Supplement {
 	
 	public void list() {
 		System.out.println("이름: " + name + ", 복용량: " + num + "알, 가격: " + price + "원");
-	}
+	} 
 	
 }
